@@ -12,7 +12,18 @@ fi
 
 # User configuration
 
-export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/texbin:/Users/aaron/.rvm/gems/ruby-2.0.0-p451/bin:/Users/aaron/.rvm/gems/ruby-2.0.0-p451@global/bin:/Users/aaron/.rvm/rubies/ruby-2.0.0-p451/bin:/Users/aaron/.rvm/bin:/Users/aaron/Library/Haskell/bin:/usr/local/sbin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin:/opt/local/bin:/opt/local/sbin:/Users/aaron/Documents/keep_forever:/Users/aaron/.rvm/gems/ruby-1.9.3-p374@global/bin:/Users/aaron/.rvm/rubies/ruby-1.9.3-p374/bin:/Users/aaron/.rvm/bin"
+# Use vim keybindings
+bindkey -v
+
+# Set Ctrl-P to up arrow behavior in vim mode.
+bindkey "^P" up-line-or-search
+
+# Speed up vi keybindings
+zle -N zle-line-init
+zle -N zle-keymap-select
+export KEYTIMEOUT=1
+
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/texbin:/Users/aaron/.rvm/gems/ruby-2.2.0p0/bin:/Users/aaron/.rvm/bin:/Users/aaron/Library/Haskell/bin:/usr/local/sbin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin:/opt/local/bin:/opt/local/sbin:/Users/aaron/Documents/keep_forever"
 
 # use MacVim instead of old vim
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
