@@ -1,4 +1,5 @@
 # Used this guy's blog: http://jeromedalbert.com/migrate-from-oh-my-zsh-to-prezto/
+# Available colors: black, green, blue, cyan, red, yellow, magenta, white
 
 function prompt_aaron_precmd {
   git-info
@@ -15,7 +16,10 @@ function prompt_aaron_setup {
   # Add hook for calling git-info before each command.
   add-zsh-hook precmd prompt_aaron_precmd
 
-  primary_color='red'
+  primary_color='blue'
+
+  zstyle ':prezto:module:editor:info:keymap:primary' format ' %F{red}❯%F{yellow}❯%F{green}❯%f'
+  zstyle ':prezto:module:editor:info:keymap:alternate' format ' %F{green}❮%F{yellow}❮%F{red}❮%f'
 
   # Set git-info parameters.
   zstyle ':prezto:module:git:info' verbose 'yes'
@@ -23,11 +27,11 @@ function prompt_aaron_setup {
   zstyle ':prezto:module:git:info:clean' format ' %F{green}✔%f'
   zstyle ':prezto:module:git:info:dirty' format ' %F{red}✗%f'
   zstyle ':prezto:module:git:info:keys' format \
-    'prompt' ' %F{green}(%f$(coalesce "%b" "%p" "%c")${git_info[rprompt]}%s%F{green})%f' \
+    'prompt' ':$(coalesce "%b" "%p" "%c")${git_info[rprompt]}%s' \
     'rprompt' '%C%D'
 
   # Define prompts.
-  PROMPT='%B%F{$primary_color}%c%f%b${(e)git_info[prompt]} > '
+  PROMPT='%F{$primary_color}%c%f${(e)git_info[prompt]}${editor_info[keymap]} '
   RPROMPT=''
 }
 
