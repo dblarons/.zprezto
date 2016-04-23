@@ -14,15 +14,11 @@ fi
 
 export GOPATH=~/go
 
-export PATH="$PATH:/Users/aaron/.rvm/gems/ruby-1.9.3-p374@global/bin:/Users/aaron/.rvm/rubies/ruby-1.9.3-p374/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/texbin:/Users/aaron/Library/Haskell/bin:/usr/local/sbin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin:/opt/local/bin:/opt/local/sbin:/Users/aaron/Documents/keep_forever:/Users/aaron/.rvm/bin:/Applications/Racket v6.2.1/bin:/Users/aaron/.rvm/gems/ruby-2.0.0-p451/bin:/Users/aaron/.rvm/gems/ruby-2.0.0-p451@global/bin:/Users/aaron/.rvm/rubies/ruby-2.0.0-p451/bin:/Users/aaron/.rvm/bin:$GOPATH/bin"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/texbin:/Users/aaron/.rvm/gems/ruby-2.0.0-p451/bin:/Users/aaron/.rvm/gems/ruby-2.0.0-p451@global/bin:/Users/aaron/.rvm/rubies/ruby-2.0.0-p451/bin:/Users/aaron/.rvm/bin:/Users/aaron/Library/Haskell/bin:/usr/local/sbin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin:/opt/local/bin:/opt/local/sbin:/Users/aaron/Documents/keep_forever:/Users/aaron/.rvm/bin:/Applications/Racket v6.2.1/bin:$GOPATH/bin"
 
 export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/aaron/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
-
-alias ruby-tk='/Users/aaron/ruby1.9.3-with-tk/homebrew/bin/ruby'
-alias irb-tk='/Users/aaron/ruby1.9.3-with-tk/homebrew/bin/irb'
-alias gem-tk='/Users/aaron/ruby1.9.3-with-tk/homebrew/bin/gem'
 
 # use MacVim instead of old vim
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
