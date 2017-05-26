@@ -51,5 +51,9 @@ bindkey '^P' up-history
 bindkey '^N' down-history
 bindkey "^U" backward-kill-line
 
+# Don't share history between terminal windows.
+setopt no_share_history
+unsetopt share_history
+
 # ctrl-r starts searching history backward.
 bindkey '^r' history-incremental-search-backward
