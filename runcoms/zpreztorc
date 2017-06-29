@@ -37,6 +37,13 @@ zstyle ':prezto:load' pmodule \
   'git'
 
 #
+# Autosuggestions
+#
+
+# Set the query found color.
+# zstyle ':prezto:module:autosuggestions:color' found ''
+
+#
 # Editor
 #
 
@@ -48,6 +55,9 @@ export KEYTIMEOUT=1
 
 # Auto convert .... to ../..
 zstyle ':prezto:module:editor' dot-expansion 'yes'
+
+# Allow the zsh prompt context to be shown.
+#zstyle ':prezto:module:editor' ps-context 'yes'
 
 #
 # Git
@@ -93,12 +103,22 @@ zstyle ':prezto:module:git:alias' skip 'yes'
 # Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'aaron'
 
+# Set how themes that use promptpwd function display the pwd, can be 'short', 'long', or 'full'
+# zstyle ':prezto:module:prompt' pwd-length 'short'
+
 #
 # Ruby
 #
 
 # Auto switch the Ruby version on directory change.
 # zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
+
+#
+# Python
+#
+
+# Auto switch the Python virtualenv on directory change.
+# zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 
 #
 # Screen
@@ -121,20 +141,22 @@ zstyle ':prezto:module:prompt' theme 'aaron'
 # Syntax Highlighting
 #
 
-# Set syntax highlighters.
-# By default, only the main highlighter is enabled.
 zstyle ':prezto:module:syntax-highlighting' highlighters \
   'main' \
   'brackets' \
   'pattern' \
   'cursor' \
   'root'
-#
+
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \
 #   'builtin' 'bg=blue' \
 #   'command' 'bg=blue' \
 #   'function' 'bg=blue'
+#
+# Set syntax pattern styles.
+# zstyle ':prezto:module:syntax-highlighting' pattern \
+#   'rm*-rf*' 'fg=white,bold,bg=red'
 
 #
 # Terminal
@@ -148,6 +170,9 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 
 # Set the tab title format.
 # zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
+
+# Set the terminal multiplexer title format.
+# zstyle ':prezto:module:terminal:multiplexer-title' format '%s'
 
 #
 # Tmux
