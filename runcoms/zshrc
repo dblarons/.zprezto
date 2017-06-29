@@ -14,11 +14,13 @@ fi
 
 export GOPATH=~/go
 
-export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/texbin:/Users/aaron/.rvm/gems/ruby-2.0.0-p451/bin:/Users/aaron/.rvm/gems/ruby-2.0.0-p451@global/bin:/Users/aaron/.rvm/rubies/ruby-2.0.0-p451/bin:/Users/aaron/.rvm/bin:/Users/aaron/Library/Haskell/bin:/usr/local/sbin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin:/opt/local/bin:/opt/local/sbin:/Users/aaron/Documents/keep_forever:/Users/aaron/.rvm/bin:/Applications/Racket v6.2.1/bin:$GOPATH/bin"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/texbin:/Users/aaron/.rvm/gems/ruby-2.0.0-p451/bin:/Users/aaron/.rvm/gems/ruby-2.0.0-p451@global/bin:/Users/aaron/.rvm/rubies/ruby-2.0.0-p451/bin:/Users/aaron/.rvm/bin:/Users/aaron/Library/Haskell/bin:/usr/local/sbin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin:/opt/local/bin:/opt/local/sbin:/Users/aaron/Documents/keep_forever:/Users/aaron/.rvm/bin:$GOPATH/bin:`yarn global bin`"
 
 export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/aaron/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
+
+export GS4JS_HOME="/usr/local/lib"
 
 # use MacVim instead of old vim
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
@@ -57,3 +59,10 @@ unsetopt share_history
 
 # ctrl-r starts searching history backward.
 bindkey '^r' history-incremental-search-backward
+
+export WORKON_HOME=~/Envs
+source /usr/local/bin/virtualenvwrapper_lazy.sh
+
+export NVM_DIR="/Users/aaronsmith/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
