@@ -240,9 +240,6 @@ fi
 # Vi Key Bindings
 #
 
-# Edit command in an external editor.
-bindkey -M vicmd "v" edit-command-line
-
 # Undo/Redo
 bindkey -M vicmd "u" undo
 bindkey -M vicmd "$key_info[Control]R" redo

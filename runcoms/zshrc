@@ -12,18 +12,10 @@ fi
 
 # User configuration
 
-export GOPATH=~/go
-
-export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/texbin:/Users/aaron/.rvm/gems/ruby-2.0.0-p451/bin:/Users/aaron/.rvm/gems/ruby-2.0.0-p451@global/bin:/Users/aaron/.rvm/rubies/ruby-2.0.0-p451/bin:/Users/aaron/.rvm/bin:/Users/aaron/Library/Haskell/bin:/usr/local/sbin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/MacOS/bin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin:/opt/local/bin:/opt/local/sbin:/Users/aaron/Documents/keep_forever:/Users/aaron/.rvm/bin:$GOPATH/bin:`yarn global bin`"
-
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/aaron/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-
-export GS4JS_HOME="/usr/local/lib"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:$HOME/.local/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/usr/texbin:$HOME/Library/Haskell/bin:/usr/local/sbin:/Applications/Postgres.app/Contents/MacOS/bin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin:/opt/local/bin:/opt/local/sbin:$HOME/Documents/keep_forever:$HOME/go/bin:/usr/local/lib/ruby/gems/2.5.0:/Applications/CMake.app/Contents/bin"
 
 # use MacVim instead of old vim
-alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias vim="nvim"
 
 # git commands simplified
 alias gsu='git status'
@@ -42,7 +34,11 @@ alias gst='git stash'
 alias gsp='git stash pop'
 alias tia='tig --all'
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# Use exa instead of ls: https://github.com/ogham/exa
+alias ls='exa'
+
+# Use bat instead of cat: https://github.com/sharkdp/bat
+alias cat='bat'
 
 #
 # Prompt
@@ -61,8 +57,19 @@ unsetopt share_history
 bindkey '^r' history-incremental-search-backward
 
 export WORKON_HOME=~/Envs
-source /usr/local/bin/virtualenvwrapper_lazy.sh
 
-export NVM_DIR="/Users/aaronsmith/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export PATH="/Users/dblarons/Library/Python/3.9/bin:$PATH"
+
+# opam configuration
+[[ ! -r /Users/dblarons/.opam/opam-init/init.zsh ]] || source /Users/dblarons/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
